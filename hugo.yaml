@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://blog.haoquan.me/"
 title: ExampleSite
 paginate: 5
 theme: PaperMod
@@ -122,8 +122,8 @@ menu:
       url: /tags/
       weight: 20
     - identifier: example
-      name: example.org
-      url: https://example.org
+      name: blog.haoquan.me
+      url: https://blog.haoquan.me/
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
