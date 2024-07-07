@@ -102,7 +102,7 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/hqn21/hugo-blog/content"
+    URL: "https://github.com/hqn21/hugo-blog/blob/main/content"
     Text: "提供建議" # edit text
     appendFilePath: true # to append file path to Edit link
 
