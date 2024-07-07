@@ -1,23 +1,62 @@
-{{- $scratch := newScratch }}
+<style>
+    .post-meta {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-{{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
-{{- end }}
+    .post-meta-child {
+        display: flex;
+        align-items: center;
+    }
 
-{{- if (.Param "ShowReadingTime") -}}
-{{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) }}
-{{- end }}
+    .fa-solid {
+        margin-right: 5px;
+    }
+</style>
 
-{{- if (.Param "ShowWordCount") -}}
-{{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d words" .WordCount))) }}
-{{- end }}
-
-{{- if not (.Param "hideAuthor") -}}
-{{- with (partial "author.html" .) }}
-{{- $scratch.Add "meta" (slice .) }}
-{{- end }}
-{{- end }}
-
-{{- with ($scratch.Get "meta") }}
-{{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
-{{- end -}}
+<span class="post-meta">
+    <span class="post-meta-child">
+        <i class="fa-solid fa-calendar"></i>
+        <span>
+            {{- (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat)) }}
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span class="post-meta-child">
+        <i class="fa-solid fa-clock"></i>
+        <span>
+            {{- .ReadingTime }} 分鐘
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span class="post-meta-child">
+        <i class="fa-solid fa-file-lines"></i>
+        <span>
+            {{- .WordCount }} 字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span class="post-meta-child">
+        <i class="fa-solid fa-at"></i>
+        <span>
+            {{- with (partial "author.html" .) }}
+            {{- . }}
+            {{- end }}
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span class="post-meta-child">
+        <i class="fa-solid fa-tag"></i>
+        <span>
+            {{- if .Params.tags }}
+            <span class="post-tags-meta">
+                {{- range $index, $value := ($.GetTerms "tags") }}
+                    {{- if eq $index 0}}<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
+                    {{- else }}、<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
+                    {{- end }}
+                {{- end }}
+            </span>
+            {{- end }}
+        </span>
+    </span>
+</span>

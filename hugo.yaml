@@ -19,7 +19,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Haoquan's Blog
-  description: "ExampleSite description"
+  description: "這是劉顥權 Haoquan Liu 的 Blog，主要分享軟體開發日常。"
   keywords: [Blog, Portfolio, PaperMod]
   author: Haoquan
   # author: ["Me", "You"] # multiple authors

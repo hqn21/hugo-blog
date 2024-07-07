@@ -3,7 +3,7 @@ title = 'Narcissistic Number 水仙花數'
 date = 2022-07-07T14:59:43+08:00
 draft = false
 tags = ['algorithm', 'c++']
-summary = '尋找 0 至 1000 的 Narcissistic Number 並使迴圈在 200 次以內結束。'
+summary = '尋找 0 至 1000 的 Narcissistic Number 並使迴圈在 200 次以內結束'
 +++
 ## 題目內容
 尋找 `0` 至 `1000` 的 Narcissistic Number 並使迴圈在 200 次以內結束。
