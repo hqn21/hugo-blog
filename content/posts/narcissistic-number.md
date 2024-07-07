@@ -27,12 +27,12 @@ int main() {
     for(int i = 1; i < 10; i++) {
         for(int k = 0; k < 10; k++) {
             count++;
-            // Two Digit Check
+            // Second Digit Check
             if((i*i + k*k) == (i * 10 + k)) {
                 cout << i << k << endl;
             }
 
-            // Three Digit Check
+            // Third Digit Check
             int n = i * 100 + k * 10 - i*i*i - k*k*k;
             if(n == 0) {
                 cout << i << k << 0 << endl;
