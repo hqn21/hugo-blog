@@ -1,12 +1,16 @@
 baseURL: "https://blog.haoquan.me/"
+languageCode: "zh-tw"
 title: Haoquan's Blog
 paginate: 5
 theme: PaperMod
 
+hasCJKLanguage: true
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+defaultContentLanguage: zh-tw
+defaultContentLanguageInSubdir: false
 
 minify:
   disableXML: true
@@ -17,15 +21,15 @@ params:
   title: Haoquan's Blog
   description: "ExampleSite description"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  author: Haoquan
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "January 2, 2006"
+  DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: false
@@ -37,21 +41,21 @@ params:
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
+    favicon: "images/favicon.ico"
     favicon16x16: "<link / abs url>"
     favicon32x32: "<link / abs url>"
     apple_touch_icon: "<link / abs url>"
     safari_pinned_tab: "<link / abs url>"
 
   label:
-    text: "Home"
-    icon: /apple-touch-icon.png
+    text: "Haoquan's Blog"
+    icon: images/haoquan.webp
     iconHeight: 35
 
   # profile-mode
@@ -71,8 +75,8 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "哈囉 \U0001F44B"
+    Content: 歡迎來到我的 Blog，這裡是我分享軟體開發日常的地方！
 
   socialIcons:
     - name: github
@@ -98,8 +102,8 @@ params:
     hiddenInSingle: true # hide on single page
 
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
-    Text: "Suggest Changes" # edit text
+    URL: "https://github.com/hqn21/hugo-blog/content"
+    Text: "提供建議" # edit text
     appendFilePath: true # to append file path to Edit link
 
   # for search
@@ -115,18 +119,26 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: home
+      name: 首頁
+      url: /
       weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
+    - identifier: posts
+      name: 文章
+      url: /posts/
       weight: 20
-    - identifier: example
-      name: blog.haoquan.me
-      url: https://blog.haoquan.me/
+    - identifier: archives
+      name: 封存
+      url: /archives/
       weight: 30
+    - identifier: tags
+      name: 標籤
+      url: /tags/
+      weight: 40
+    - identifier: search
+      name: 搜尋
+      url: /search/
+      weight: 50
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
@@ -137,3 +149,9 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
