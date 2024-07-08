@@ -23,7 +23,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: Haoquan
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["images/haoquan.webp"]
   DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
@@ -124,22 +124,18 @@ menu:
       name: 首頁
       url: /
       weight: 10
-    - identifier: posts
-      name: 文章
-      url: /posts/
-      weight: 20
     - identifier: archives
       name: 封存
       url: /archives/
-      weight: 30
+      weight: 20
     - identifier: tags
       name: 標籤
       url: /tags/
-      weight: 40
+      weight: 30
     - identifier: search
       name: 搜尋
       url: /search/
-      weight: 50
+      weight: 40
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
