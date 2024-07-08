@@ -8,7 +8,7 @@ summary: '簡述高大資工面試形式、時長、內容'
 cover:
     image: 'cover.png'
     caption: ''
-    alt: ''
+    alt: 'National University of Kaohsiung'
     relative: true
 ---
 ## 場地配置
