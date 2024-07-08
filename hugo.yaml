@@ -23,7 +23,7 @@ params:
   keywords: [Blog, Portfolio, PaperMod]
   author: Haoquan
   # author: ["Me", "You"] # multiple authors
-  images: ["images/haoquan.webp"]
+  images: ["images/haoquan-blog.png"]
   DateFormat: "2006-01-02"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
