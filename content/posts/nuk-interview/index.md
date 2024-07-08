@@ -3,9 +3,9 @@ title: '111 學年度國立高雄大學資訊工程學系面試經驗分享'
 date: 2022-06-06T18:48:51+08:00
 draft: false
 tags:
-- interview
-- nuk
-- university
+- Interview
+- NUK
+- University
 summary: '簡述高大資工面試形式、時長、內容'
 cover:
     image: 'cover.png'
