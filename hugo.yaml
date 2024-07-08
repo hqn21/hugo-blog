@@ -63,7 +63,7 @@ params:
     enabled: false # needs to be explicitly set
     title: ExampleSite
     subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    imageUrl: "images/haoquan.webp"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
@@ -97,9 +97,10 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+    responsiveImages: true
 
   editPost:
     URL: "https://github.com/hqn21/hugo-blog/blob/main/content"
