@@ -51,8 +51,8 @@
             {{- if .Params.tags }}
             <span class="post-tags-meta">
                 {{- range $index, $value := ($.GetTerms "tags") }}
-                    {{- if eq $index 0}}<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
-                    {{- else }}、<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
+                    {{- if eq $index 0}}<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .Name }}</a>
+                    {{- else }}、<a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .Name }}</a>
                     {{- end }}
                 {{- end }}
             </span>
