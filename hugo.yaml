@@ -1,7 +1,6 @@
 baseURL: "https://blog.haoquan.me/"
 languageCode: "zh-tw"
 title: Haoquan's Blog
-paginate: 5
 theme: PaperMod
 
 hasCJKLanguage: true
@@ -11,6 +10,9 @@ buildFuture: false
 buildExpired: false
 defaultContentLanguage: zh-tw
 defaultContentLanguageInSubdir: false
+
+pagination:
+  pagerSize: 5
 
 minify:
   disableXML: true
@@ -152,3 +154,5 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
+
+publishDir: docs
